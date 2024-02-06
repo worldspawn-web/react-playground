@@ -1,0 +1,46 @@
+@import '../../scss/colors.scss';
+
+.nav {
+  max-width: 300px;
+  height: 100vh;
+  background-color: $grey;
+}
+
+.nav__header {
+  font-family: 'Guch';
+  font-size: 28px;
+  color: $dark-green;
+}
+
+.nav__header__wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px;
+}
+
+.nav__author {
+  font-size: 14px;
+  color: $bright;
+  margin-top: 10px;
+}
+
+.nav__content__wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  height: 775px;
+  width: 100%;
+  border: 1px solid black;
+  box-shadow: inset black 0px 0px 30px -12px;
+}
+
+.nav__content__link {
+  display: flex;
+  margin: 10px 20px;
+  text-decoration: none;
+}
+
+.nav__content__link:hover {
+  transform: scale(1.1);
+  color: $dark-green;
+}
