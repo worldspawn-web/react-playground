@@ -1,0 +1,32 @@
+@import '../../scss/colors.scss';
+
+.page {
+  background-color: $darkest;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.page__greeting {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+}
+
+.page__greeting__img {
+  height: 200px;
+  width: 200px;
+}
+
+.page__greeting__header {
+  margin: 20px 0;
+}
+
+.page__greeting__text {
+  max-width: 1000px;
+  line-height: 3;
+  text-align: center;
+}
