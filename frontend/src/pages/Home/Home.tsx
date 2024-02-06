@@ -1,14 +1,10 @@
-import { NavBar } from '../../common';
+import { BackgroundMain, NavBar } from '../../common';
 import styles from './Home.module.scss';
 
 export const Home = () => {
   return (
     <div className={styles.page}>
-      <div className={styles.page__background}>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
+      <BackgroundMain />
       <NavBar />
       <section className={styles.page__greeting}>
         <img
