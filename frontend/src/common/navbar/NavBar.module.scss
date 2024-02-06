@@ -3,7 +3,8 @@
 .nav {
   max-width: 300px;
   height: 100vh;
-  background-color: $grey;
+  background-color: transparent;
+  backdrop-filter: blur(20px);
 }
 
 .nav__header {
@@ -30,8 +31,7 @@
   overflow-y: scroll;
   height: 775px;
   width: 100%;
-  border: 1px solid black;
-  box-shadow: inset black 0px 0px 30px -12px;
+  /* box-shadow: inset black 0px 0px 30px -12px; */
 }
 
 .nav__content__link {
