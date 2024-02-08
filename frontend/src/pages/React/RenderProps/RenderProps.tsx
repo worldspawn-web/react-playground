@@ -1,10 +1,9 @@
 import styles from './RenderProps.module.scss';
 
-import { BackgroundMain, NavBar } from '../../../common';
-import { LiveEditor, LiveProvider } from 'react-live';
+import { BackgroundMain, CodePlayground, NavBar } from '../../../common';
 
 const RenderProps = () => {
-  const code1 = `export default function Profile() {
+  const code: string = `export default function Profile() {
     return (
       <Avatar
         person={{ name: 'Lin Lanying', imageId: '1bX5QH6' }}
@@ -25,11 +24,7 @@ const RenderProps = () => {
           with a render prop takes a function that returns a React element and
           calls it instead of implementing its own render logic.
         </div>
-        <section className={styles.code__playground}>
-          <LiveProvider code={code1}>
-            <LiveEditor />
-          </LiveProvider>
-        </section>
+        {CodePlayground(code)}
         <section className={styles.info__links}>
           <a href="https://react.dev/learn/passing-props-to-a-component">
             Render Props in React

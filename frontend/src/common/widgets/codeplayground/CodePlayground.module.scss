@@ -1,0 +1,10 @@
+@import '../../../scss/colors.scss';
+
+.code__playground {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  border: 5px solid $grey;
+  border-radius: 10px;
+  max-width: 1080px;
+}

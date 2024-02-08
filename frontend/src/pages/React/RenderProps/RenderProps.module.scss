@@ -27,15 +27,6 @@
   box-shadow: inset black 0px 0px 30px -12px;
 }
 
-.code__playground {
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-  border: 5px solid $grey;
-  border-radius: 10px;
-  max-width: 1080px;
-}
-
 .code__preview {
   display: flex;
   justify-content: center;
