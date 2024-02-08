@@ -1,19 +1,23 @@
 .page {
   display: flex;
   flex-direction: row;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .info__wrapper {
-  display: flex;
+  // display: flex;
+  // flex-direction: column;
+
   max-width: 1000px;
-  max-height: 800px;
+  height: 800px;
+
   line-height: 2;
+
   justify-content: center;
-  align-items: center;
-  margin: 20px auto;
+  // align-items: center;
+
+  margin: 40px auto;
   background-color: transparent;
-  flex-direction: column;
   overflow-y: scroll;
 }
 
@@ -23,6 +27,16 @@
   border-radius: 10px;
   backdrop-filter: blur(80px);
   box-shadow: inset black 0px 0px 30px -12px;
+  margin-top: 20px;
+
+  li {
+    margin-left: 20px;
+    color: $dark-green;
+  }
+}
+
+.info:first-child {
+  margin-top: 0;
 }
 
 .info__links {
