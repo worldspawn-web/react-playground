@@ -1,0 +1,1 @@
+export { pageDataParser } from './pageDataParser';
