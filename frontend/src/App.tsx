@@ -1,10 +1,13 @@
-import './App.module.scss';
 import { Suspense } from 'react';
+
 import { Router } from './router';
+import { SuspenseSpinner } from './common';
+import './App.module.scss';
+
 export default function App() {
   return (
-    <Suspense fallback={'Loading...'}>
-      <Router />
+    <Suspense fallback={<SuspenseSpinner />}>
+      <Router />;
     </Suspense>
   );
 }
