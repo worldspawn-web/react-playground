@@ -1,12 +1,12 @@
 .page {
   display: flex;
   flex-direction: row;
+
   overflow-y: auto;
 }
 
 .info__wrapper {
-  // display: flex;
-  // flex-direction: column;
+  margin: 40px auto;
 
   max-width: 1000px;
   height: 800px;
@@ -14,24 +14,29 @@
   line-height: 2;
 
   justify-content: center;
-  // align-items: center;
 
-  margin: 40px auto;
   background-color: transparent;
+
   overflow-y: scroll;
+
+  h1 {
+    font-family: 'Guch';
+  }
 }
 
 .info {
   padding: 20px;
+  margin-top: 20px;
+
   border: 2px solid $grey;
   border-radius: 10px;
   backdrop-filter: blur(80px);
   box-shadow: inset black 0px 0px 30px -12px;
-  margin-top: 20px;
+
+  font-family: 'Trebuchet MS';
 
   li {
     margin-left: 20px;
-    color: $dark-green;
   }
 }
 
@@ -40,11 +45,19 @@
 }
 
 .info__links {
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  margin-top: 20px;
+
+  font-size: 22px;
+
+  a {
+    transition: 0.3s all ease;
+  }
+
   a:hover {
     transform: scale(1.1);
   }
