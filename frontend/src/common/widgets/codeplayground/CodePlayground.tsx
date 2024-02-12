@@ -1,4 +1,5 @@
-import { LiveProvider, LiveEditor, LiveError } from 'react-live';
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
+
 import styles from './CodePlayground.module.scss';
 
 export const CodePlayground = (
@@ -6,7 +7,7 @@ export const CodePlayground = (
   options?: { preview: boolean; debug: boolean }
 ) => {
   const RenderPreview = () => {
-    if (options?.preview) return <LiveEditor />;
+    if (options?.preview) return <LivePreview />;
   };
   const RenderErrors = () => {
     if (options?.debug) return <LiveError />;
