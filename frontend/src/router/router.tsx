@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
-import { routenames } from './routenames';
 import { FC, lazy } from 'react';
+
+import { routenames } from './routenames';
 import { Home } from '../pages';
 
 // Lazy Renders
