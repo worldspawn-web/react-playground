@@ -11,7 +11,7 @@ export const renderPage = (data) => {
 
   const renderPageLinks = (links: string[], linkHeader: string[]) => {
     return links.map((link, index) => (
-      <a key={index} href={link}>
+      <a key={index} href={link} target="_blank">
         {linkHeader[index]}
       </a>
     ));
@@ -25,7 +25,7 @@ export const renderPage = (data) => {
         <section className={styles.info__wrapper}>
           <h1>{header}</h1>
           {renderPageInfo(info)}
-          {CodePlayground(code)}
+          {code !== undefined ? CodePlayground(code) : null}
           <section className={styles.info__links}>
             {renderPageLinks(links, linkHeader)}
           </section>
