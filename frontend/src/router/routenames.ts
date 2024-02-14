@@ -4,5 +4,6 @@ export const routenames = {
   REFS: '/react/refs',
   EVENTS: '/react/events',
   HIGH_ORDER: '/react/high-order-components',
+  CUSTOM_HOOKS: '/react/custom-hooks',
   NOT_FOUND: '*',
 };

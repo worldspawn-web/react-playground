@@ -1,0 +1,19 @@
+{
+  "header": "Custom Hooks",
+  "info": [
+    "Building your own Hooks lets you extract component logic into reusable functions.",
+    "React comes with several built-in Hooks like useState, useContext, and useEffect. Sometimes, you'll wish that there was a Hook for some more specific purpose: for example, to fetch data, to keep track of whether the user is online, or to connect to a chat room. You might not find these Hooks in React, but you can create your own Hooks for your application's needs.",
+    ""
+  ],
+  "links": [
+    "https://react.dev/learn/reusing-logic-with-custom-hooks",
+    "https://www.freecodecamp.org/news/how-to-create-react-hooks/",
+    "https://www.robinwieruch.de/react-custom-hook/"
+  ],
+  "linkHeader": [
+    "Reusing Logic with Custom Hooks",
+    "How to create a custom Hook #1",
+    "How to create a custom Hook #2"
+  ],
+  "code": "function useOnlineStatus() {\n  const [isOnline, setIsOnline] = useState(true);\n  useEffect(() => {\n    function handleOnline() {\n      setIsOnline(true);\n    }\n    function handleOffline() {\n      setIsOnline(false);\n    }\n    window.addEventListener('online', handleOnline);\n    window.addEventListener('offline', handleOffline);\n    return () => {\n      window.removeEventListener('online', handleOnline);\n      window.removeEventListener('offline', handleOffline);\n    };\n  }, []);\nreturn isOnline;}"
+}

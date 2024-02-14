@@ -9,6 +9,7 @@ const RenderPage = lazy(() => import('../pages/React/RenderProps'));
 const RefsPage = lazy(() => import('../pages/React/Refs'));
 const EventsPage = lazy(() => import('../pages/React/Events'));
 const HighOrderPage = lazy(() => import('../pages/React/HighOrder'));
+const CustomHooksPage = lazy(() => import('../pages/React/CustomHooks'));
 
 export const Router: FC = () => (
   <Routes>
@@ -17,5 +18,6 @@ export const Router: FC = () => (
     <Route path={routenames.REFS} element={<RefsPage />} />
     <Route path={routenames.EVENTS} element={<EventsPage />} />
     <Route path={routenames.HIGH_ORDER} element={<HighOrderPage />} />
+    <Route path={routenames.CUSTOM_HOOKS} element={<CustomHooksPage />} />
   </Routes>
 );
