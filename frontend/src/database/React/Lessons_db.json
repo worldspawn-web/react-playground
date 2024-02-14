@@ -1,0 +1,89 @@
+{
+  "0": {
+    "header": "Custom Hooks",
+    "info": [
+      "Building your own Hooks lets you extract component logic into reusable functions.",
+      "React comes with several built-in Hooks like useState, useContext, and useEffect. Sometimes, you'll wish that there was a Hook for some more specific purpose: for example, to fetch data, to keep track of whether the user is online, or to connect to a chat room. You might not find these Hooks in React, but you can create your own Hooks for your application's needs.",
+      ""
+    ],
+    "links": [
+      "https://react.dev/learn/reusing-logic-with-custom-hooks",
+      "https://www.freecodecamp.org/news/how-to-create-react-hooks/",
+      "https://www.robinwieruch.de/react-custom-hook/"
+    ],
+    "linkHeader": [
+      "Reusing Logic with Custom Hooks",
+      "How to create a custom Hook #1",
+      "How to create a custom Hook #2"
+    ],
+    "code": "function useOnlineStatus() {\n  const [isOnline, setIsOnline] = useState(true);\n  useEffect(() => {\n    function handleOnline() {\n      setIsOnline(true);\n    }\n    function handleOffline() {\n      setIsOnline(false);\n    }\n    window.addEventListener('online', handleOnline);\n    window.addEventListener('offline', handleOffline);\n    return () => {\n      window.removeEventListener('online', handleOnline);\n      window.removeEventListener('offline', handleOffline);\n    };\n  }, []);\nreturn isOnline;}"
+  },
+  "1": {
+    "header": "Events",
+    "info": [
+      "Handling events with React elements is very similar to handling events on DOM elements. There are some syntax differences:\n   React events are named using camelCase, rather than lowercase.\n   With JSX you pass a function as the event handler, rather than a string."
+    ],
+    "links": [
+      "https://react.dev/learn/responding-to-events",
+      "https://react.dev/reference/react-dom/components/common#react-event-object",
+      "https://www.robinwieruch.de/react-event-handler/"
+    ],
+    "linkHeader": [
+      "Responding to Events",
+      "React Event Object (Synthetic Event)",
+      "React Event Handler"
+    ],
+    "code": "export default function Button() {\n  function handleClick() {\n    alert('You clicked me!');\n  }\n\n  return (\n    <button onClick={handleClick}>\n      Click me\n    </button>\n  );\n}"
+  },
+  "2": {
+    "header": "High Order Components",
+    "info": [
+      "A higher-order component (HOC) is an advanced technique in React for reusing component logic. HOCs are not part of the React API, per se. They are a pattern that emerges from React’s compositional nature.",
+      "Concretely, a higher-order component is a function that takes a component and returns a new component. Higher-order components are not commonly used in modern React code. In order to reuse logic, React hooks are mainly used now."
+    ],
+    "links": [
+      "https://reactjs.org/docs/higher-order-components.htmls",
+      "https://www.robinwieruch.de/react-higher-order-components/",
+      "https://youtu.be/J5P0q7EROfw?si=-8s5h1b0mZSGVgLt"
+    ],
+    "linkHeader": [
+      "High-Order Components",
+      "How to create a Higher-Order Component",
+      "Learn React Higher Order Component (HOC) in 10 Minutes"
+    ]
+  },
+  "3": {
+    "header": "Refs",
+    "info": [
+      "Refs provide a way to access DOM nodes or React elements created in the render method. In the typical React dataflow, props are the only way that parent components interact with their children. To modify a child, you re-render it with new props. However, there are a few cases where you need to imperatively modify a child outside of the typical dataflow. The child to be modified could be an instance of a React component, or it could be a DOM element. For both of these cases, React provides an escape hatch.",
+      "When a piece of information is used for rendering, keep it in state.When a piece of information is only needed by event handlers and changing it doesn't require a re-render, using a ref may be more efficient."
+    ],
+    "links": [
+      "https://react.dev/learn/referencing-values-with-refs",
+      "https://react.dev/learn/manipulating-the-dom-with-refs",
+      "https://www.robinwieruch.de/react-ref/",
+      "https://dmitripavlutin.com/react-useref-guide/",
+      "https://www.youtube.com/watch?v=t2ypzz6gJm0"
+    ],
+    "linkHeader": [
+      "Referencing Values with Refs",
+      "Manipulating the DOM with Refs",
+      "Examples of using refs in React",
+      "The Complete Guid to useRef() and Refs in React",
+      "Learn useRef in 11 Minutes - Web Dev Simplified"
+    ],
+    "code": "let countRef = useRef(0);\nfunction handleClick() {\n  countRef.current = countRef.current + 1;\n}"
+  },
+  "4": {
+    "header": "Render Props",
+    "info": [
+      "The term 'render props' refers to a technique for sharing code between React components using a prop whose value is a function. A component with a render prop takes a function that returns a React element and calls it instead of implementing its own render logic."
+    ],
+    "links": [
+      "https://react.dev/learn/passing-props-to-a-component",
+      "https://www.robinwieruch.de/react-render-props/"
+    ],
+    "linkHeader": ["Render Props in React", "Creating a Render Prop Component"],
+    "code": "export default function Profile() {\n  return (\n    <Avatar\n     person={{ name: 'Lin Lanying', imageId: '1bX5QH6' }}\n     size={100}\n    />\n  );\n}"
+  }
+}
